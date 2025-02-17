@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/wallpaper/pngwing.com.png" type="image/x-icon">
+    <title>Login</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(1deg, black, rgb(93, 9, 93));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        h1{
+            font-size: 80px;
+        }
+
+        .btn {
+            color: aliceblue;
+        }
+
+        .btn:hover{
+            scale: 1.1;
+            color: grey;
+            border: solid 2px rgb(110, 58, 110);
+        }
+
+        .img {
+            width: 200px;
+            height: 200px;
+            animation: pulse 6s infinite alternate ease-in-out;
+            margin-right: 60px   
+        }
+        .img1{
+            display: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        input{
+            width: 290px;
+            height: 50px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            margin-top: 30px;
+            text-align: center;
+            background-color: black;
+            color: purple;
+        }
+
+        input:hover {
+            border: solid 2px rgb(255, 255, 255);
+        }
+
+        
+        form {
+            width: 400px;
+            height: 500px;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        @media (max-width: 915px) {
+            
+            .img{
+                display: none;
+            }
+            
+            input {
+                color: aliceblue;
+            }
+
+            .img1{
+                width: 190px;
+                height: 190px;
+                margin-bottom: 40px;
+                display: flex;
+            }
+
+    }
+    </style>
+</head>
+<body> 
+    <div class="container"></div>
+    
+        <img class="img" src="/assets/wallpaper/pngwing.com.png" alt="" onclick="morceguinho()"> 
+        <form>  
+            <img class="img1" src="/assets/wallpaper/pngwing.com.png" alt="" onclick="morceguinho()">    
+            <input type="text" name="nome" id="nome" placeholder="Username" required maxlength="10" title="Id do Usuário">
+            <input type="password" name="nome" id="senha" placeholder="Password" required  title="Senha do Usuário">
+            <input class="btn" type="submit" onclick="login(); return false">
+        </form> 
+    </div>
+
+    <script src="/assets/script/login.js"></script>
+</body>
+</html>
